@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RocketListView(store: Store(
+                initialState: RocketListState(),
+                reducer: rocketListReducer,
+                environment: RocketListEnvironment()
+            ))
         }
     }
 }
