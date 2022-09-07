@@ -10,6 +10,7 @@
 		A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C2328C73B6800D15056 /* RocketListView.swift */; };
 		A0016C2728C73BA800D15056 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A0016C2628C73BA800D15056 /* ComposableArchitecture */; };
 		A0016C2928C73BCE00D15056 /* RocketListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C2828C73BCE00D15056 /* RocketListFeature.swift */; };
+		A0016C3728C7509900D15056 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C3628C7509900D15056 /* DateCreator.swift */; };
 		A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE66728AFBAF1000567C4 /* TCAApp.swift */; };
 		A01BE66A28AFBAF1000567C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE66928AFBAF1000567C4 /* ContentView.swift */; };
 		A01BE66C28AFBAF2000567C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01BE66B28AFBAF2000567C4 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		A0016C2328C73B6800D15056 /* RocketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListView.swift; sourceTree = "<group>"; };
 		A0016C2828C73BCE00D15056 /* RocketListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListFeature.swift; sourceTree = "<group>"; };
+		A0016C3628C7509900D15056 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		A01BE66428AFBAF1000567C4 /* TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01BE66728AFBAF1000567C4 /* TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAApp.swift; sourceTree = "<group>"; };
 		A01BE66928AFBAF1000567C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			files = (
 				A01BE66A28AFBAF1000567C4 /* ContentView.swift in Sources */,
 				A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */,
+				A0016C3728C7509900D15056 /* DateCreator.swift in Sources */,
 				A0016C2928C73BCE00D15056 /* RocketListFeature.swift in Sources */,
 				A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */,
 			);
