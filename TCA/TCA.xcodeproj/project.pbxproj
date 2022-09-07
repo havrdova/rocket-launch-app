@@ -11,10 +11,11 @@
 		A0016C2728C73BA800D15056 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A0016C2628C73BA800D15056 /* ComposableArchitecture */; };
 		A0016C2928C73BCE00D15056 /* RocketListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C2828C73BCE00D15056 /* RocketListFeature.swift */; };
 		A0016C2E28C7418400D15056 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C2D28C7418400D15056 /* Rocket.swift */; };
+		A0016C3028C7430800D15056 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C2F28C7430800D15056 /* APIError.swift */; };
+		A0016C3228C74F6900D15056 /* RocketListEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C3128C74F6900D15056 /* RocketListEffect.swift */; };
 		A0016C3528C7506400D15056 /* Rocket+instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C3428C7506400D15056 /* Rocket+instances.swift */; };
 		A0016C3728C7509900D15056 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0016C3628C7509900D15056 /* DateCreator.swift */; };
 		A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE66728AFBAF1000567C4 /* TCAApp.swift */; };
-		A01BE66A28AFBAF1000567C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE66928AFBAF1000567C4 /* ContentView.swift */; };
 		A01BE66C28AFBAF2000567C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01BE66B28AFBAF2000567C4 /* Assets.xcassets */; };
 		A01BE66F28AFBAF2000567C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01BE66E28AFBAF2000567C4 /* Preview Assets.xcassets */; };
 		A01BE67928AFBAF2000567C4 /* TCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE67828AFBAF2000567C4 /* TCATests.swift */; };
@@ -22,6 +23,7 @@
 		A01BE68528AFBAF2000567C4 /* TCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01BE68428AFBAF2000567C4 /* TCAUITestsLaunchTests.swift */; };
 		A08C091228C88A8000224BEA /* RocketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091128C88A8000224BEA /* RocketDetail.swift */; };
 		A08C091428C88C1E00224BEA /* RocketDetail+instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091328C88C1E00224BEA /* RocketDetail+instances.swift */; };
+		A08C091728C89A2A00224BEA /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091628C89A2A00224BEA /* LocalizedStringKey+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +47,12 @@
 		A0016C2328C73B6800D15056 /* RocketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListView.swift; sourceTree = "<group>"; };
 		A0016C2828C73BCE00D15056 /* RocketListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListFeature.swift; sourceTree = "<group>"; };
 		A0016C2D28C7418400D15056 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		A0016C2F28C7430800D15056 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A0016C3128C74F6900D15056 /* RocketListEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListEffect.swift; sourceTree = "<group>"; };
 		A0016C3428C7506400D15056 /* Rocket+instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+instances.swift"; sourceTree = "<group>"; };
 		A0016C3628C7509900D15056 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		A01BE66428AFBAF1000567C4 /* TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01BE66728AFBAF1000567C4 /* TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAApp.swift; sourceTree = "<group>"; };
-		A01BE66928AFBAF1000567C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A01BE66B28AFBAF2000567C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01BE66E28AFBAF2000567C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A01BE67428AFBAF2000567C4 /* TCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,7 @@
 		A01BE68428AFBAF2000567C4 /* TCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A08C091128C88A8000224BEA /* RocketDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetail.swift; sourceTree = "<group>"; };
 		A08C091328C88C1E00224BEA /* RocketDetail+instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetail+instances.swift"; sourceTree = "<group>"; };
+		A08C091628C89A2A00224BEA /* LocalizedStringKey+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +94,19 @@
 		A0016C2228C73B4100D15056 /* RocketList */ = {
 			isa = PBXGroup;
 			children = (
-				A0016C2328C73B6800D15056 /* RocketListView.swift */,
+				A0016C3128C74F6900D15056 /* RocketListEffect.swift */,
 				A0016C2828C73BCE00D15056 /* RocketListFeature.swift */,
+				A0016C2328C73B6800D15056 /* RocketListView.swift */,
 			);
 			path = RocketList;
+			sourceTree = "<group>";
+		};
+		A0016C2A28C73FCD00D15056 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0016C2228C73B4100D15056 /* RocketList */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A0016C2B28C73FFF00D15056 /* Models */ = {
@@ -104,6 +117,18 @@
 				A08C091128C88A8000224BEA /* RocketDetail.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A0016C2C28C7401800D15056 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A08C091528C899F900224BEA /* Localizable */,
+				A01BE66B28AFBAF2000567C4 /* Assets.xcassets */,
+				A01BE66D28AFBAF2000567C4 /* Preview Content */,
+				A0016C2F28C7430800D15056 /* APIError.swift */,
+				A0016C3628C7509900D15056 /* DateCreator.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		A0016C3328C7503800D15056 /* Mock */ = {
@@ -139,11 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				A01BE66728AFBAF1000567C4 /* TCAApp.swift */,
-				A01BE66928AFBAF1000567C4 /* ContentView.swift */,
-				A0016C2228C73B4100D15056 /* RocketList */,
-				A01BE66B28AFBAF2000567C4 /* Assets.xcassets */,
-				A01BE66D28AFBAF2000567C4 /* Preview Content */,
+				A0016C2A28C73FCD00D15056 /* Components */,
 				A0016C2B28C73FFF00D15056 /* Models */,
+				A0016C2C28C7401800D15056 /* SupportingFiles */,
 			);
 			path = TCA;
 			sourceTree = "<group>";
@@ -171,6 +194,14 @@
 				A01BE68428AFBAF2000567C4 /* TCAUITestsLaunchTests.swift */,
 			);
 			path = TCAUITests;
+			sourceTree = "<group>";
+		};
+		A08C091528C899F900224BEA /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				A08C091628C89A2A00224BEA /* LocalizedStringKey+.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,13 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01BE66A28AFBAF1000567C4 /* ContentView.swift in Sources */,
+				A0016C3228C74F6900D15056 /* RocketListEffect.swift in Sources */,
 				A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */,
 				A0016C3728C7509900D15056 /* DateCreator.swift in Sources */,
 				A0016C2928C73BCE00D15056 /* RocketListFeature.swift in Sources */,
 				A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */,
+				A0016C3028C7430800D15056 /* APIError.swift in Sources */,
 				A0016C2E28C7418400D15056 /* Rocket.swift in Sources */,
 				A08C091428C88C1E00224BEA /* RocketDetail+instances.swift in Sources */,
+				A08C091728C89A2A00224BEA /* LocalizedStringKey+.swift in Sources */,
 				A0016C3528C7506400D15056 /* Rocket+instances.swift in Sources */,
 				A08C091228C88A8000224BEA /* RocketDetail.swift in Sources */,
 			);
@@ -475,7 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TCA/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = SF322564WJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -504,7 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TCA/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = SF322564WJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

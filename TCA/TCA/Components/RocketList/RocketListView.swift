@@ -14,7 +14,21 @@ struct RocketListView: View {
     let store: Store<RocketListState, RocketListAction>
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WithViewStore(self.store) { store in
+            listView(rockets: store.rockets)
+                .onAppear{
+                    store.send(.onAppear)
+                }
+                .navigationTitle()
+        }
+    }
+
+    func listView(rockets: [Rocket]) -> some View {
+        List {
+            ForEach(rockets) { rocket in
+                Text(rocket.name)
+            }
+        }
     }
 }
 
@@ -25,7 +39,7 @@ struct RocketListView_Previews: PreviewProvider {
         RocketListView(store: Store(
             initialState: RocketListState(),
             reducer: rocketListReducer,
-            environment: RocketListEnvironment()
+            environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock)
         ))
     }
 }

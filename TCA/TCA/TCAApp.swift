@@ -12,11 +12,13 @@ import ComposableArchitecture
 struct TCAApp: App {
     var body: some Scene {
         WindowGroup {
-            RocketListView(store: Store(
-                initialState: RocketListState(),
-                reducer: rocketListReducer,
-                environment: RocketListEnvironment()
-            ))
+            NavigationView {
+                RocketListView(store: Store(
+                    initialState: RocketListState(),
+                    reducer: rocketListReducer,
+                    environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock)
+                ))
+            }
         }
     }
 }
