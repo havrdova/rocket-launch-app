@@ -19,14 +19,14 @@ struct RocketListView: View {
                 .onAppear{
                     store.send(.onAppear)
                 }
-                .navigationTitle()
+                .navigationTitle(.RocketList.title)
         }
     }
 
     func listView(rockets: [Rocket]) -> some View {
         List {
             ForEach(rockets) { rocket in
-                Text(rocket.name)
+                RocketCellView(rocket: rocket)
             }
         }
     }
