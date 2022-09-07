@@ -26,7 +26,11 @@ struct RocketListView: View {
     func listView(rockets: [Rocket]) -> some View {
         List {
             ForEach(rockets) { rocket in
-                RocketCellView(rocket: rocket)
+                NavigationLink {
+                    RocketDetailView()
+                } label: {
+                    RocketCellView(rocket: rocket)
+                }
             }
         }
     }
