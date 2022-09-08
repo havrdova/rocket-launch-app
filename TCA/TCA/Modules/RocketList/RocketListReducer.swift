@@ -1,25 +1,5 @@
-//
-//  RocketListFeature.swift
-//  TCA
-//
-//  Created by Lucie Havrdová on 06.09.2022.
-//
-
 import ComposableArchitecture
 import Dispatch
-
-// MARK: - RocketList State
-
-struct RocketListState: Equatable {
-    var rockets: [Rocket] = []
-}
-
-// MARK: - RocketList Action
-
-enum RocketListAction: Equatable {
-    case onAppear
-    case dataLoaded(Result<[Rocket], APIError>)
-}
 
 // MARK: - RocketList Environment
 

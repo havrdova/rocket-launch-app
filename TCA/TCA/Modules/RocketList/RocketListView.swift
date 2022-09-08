@@ -1,12 +1,18 @@
-//
-//  RocketListView.swift
-//  TCA
-//
-//  Created by Lucie Havrdová on 06.09.2022.
-//
-
 import SwiftUI
 import ComposableArchitecture
+
+// MARK: - RocketList State
+
+struct RocketListState: Equatable {
+    var rockets: [Rocket] = []
+}
+
+// MARK: - RocketList Action
+
+enum RocketListAction: Equatable {
+    case onAppear
+    case dataLoaded(Result<[Rocket], APIError>)
+}
 
 // MARK: - RocketList View
 
@@ -15,7 +21,7 @@ struct RocketListView: View {
 
     var body: some View {
         WithViewStore(self.store) { store in
-            listView(rockets: store.rockets)
+            content(rockets: store.rockets)
                 .onAppear{
                     store.send(.onAppear)
                 }
@@ -23,11 +29,15 @@ struct RocketListView: View {
         }
     }
 
-    func listView(rockets: [Rocket]) -> some View {
+    func content(rockets: [Rocket]) -> some View {
         List {
             ForEach(rockets) { rocket in
                 NavigationLink {
-                    RocketDetailView()
+                    RocketDetailView(store: Store(
+                        initialState: RocketDetailState(id: rocket.id),
+                        reducer: rocketDetailReducer,
+                        environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock))
+                    )
                 } label: {
                     RocketCellView(rocket: rocket)
                 }

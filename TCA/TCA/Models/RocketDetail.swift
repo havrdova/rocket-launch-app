@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Rocket Detail Model
 
-struct RocketDetail {
+struct RocketDetail: Equatable {
     let id: String
     let name: String
     let description: String
@@ -28,7 +28,7 @@ enum ParameterType {
     case mass
 }
 
-struct Parameter {
+struct Parameter: Equatable {
     let type: ParameterType
     let name: String // LocalizedStringKey // TODO: implement
     var metric: Double
@@ -49,7 +49,7 @@ struct Parameter {
 
 // MARK: Stage
 
-struct Stage {
+struct Stage: Equatable {
     let engines: Int
     let reusable: Bool
     let fuelAmount: Int

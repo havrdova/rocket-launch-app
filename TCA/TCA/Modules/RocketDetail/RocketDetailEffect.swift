@@ -9,11 +9,11 @@ import ComposableArchitecture
 
 // MARK: - RocketDetail data providers
 
-func getRocketDetail(id: Int) -> Effect<RocketDetail, APIError> {
+func getRocketDetail(id: String) -> Effect<RocketDetail, APIError> {
     // TODO: implement
     return Effect(value: RocketDetail.falcon9)
 }
 
-func getRocketDetailFromMock(id: Int) -> Effect<RocketDetail, APIError> {
+func getRocketDetailFromMock(id: String) -> Effect<RocketDetail, APIError> {
     return Effect(value: RocketDetail.falcon9)
 }

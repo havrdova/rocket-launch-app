@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 // MARK: - Rocket Detail View
 
 struct RocketDetailView: View {
+    let store: Store<RocketDetailState, RocketDetailAction>
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WithViewStore(self.store) { store in
+            if let rocket = store.rocket {
+                content(rocket: rocket)
+                    .onAppear{
+                        store.send(.onAppear)
+                    }
+                    .navigationTitle(store.rocket?.name ?? "noName")
+            } else {
+                Text("Loading")
+            }
+        }
+    }
+
+    func content(rocket: RocketDetail) -> some View {
+        Text(rocket.name)
     }
 }
 
@@ -19,6 +36,10 @@ struct RocketDetailView: View {
 
 struct RocketDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RocketDetailView()
+        RocketDetailView(store: Store(
+            initialState: RocketDetailState(id: RocketDetail.falcon9.id),
+            reducer: rocketDetailReducer,
+            environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock)
+        ))
     }
 }
