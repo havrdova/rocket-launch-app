@@ -30,6 +30,8 @@
 		A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092428C8A7E200224BEA /* RocketDetailView.swift */; };
 		A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092628C8C25500224BEA /* RocketDetailReducer.swift */; };
 		A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092828C8C91100224BEA /* RocketDetailManager.swift */; };
+		A0FC9F3C28C9D833007D1BBD /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */; };
+		A0FC9F3E28C9D893007D1BBD /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		A08C092428C8A7E200224BEA /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
 		A08C092628C8C25500224BEA /* RocketDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailReducer.swift; sourceTree = "<group>"; };
 		A08C092828C8C91100224BEA /* RocketDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailManager.swift; sourceTree = "<group>"; };
+		A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
+		A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A01BE66728AFBAF1000567C4 /* TCAApp.swift */,
+				A0FC9F3928C9D80A007D1BBD /* Components */,
 				A0016C2B28C73FFF00D15056 /* Models */,
 				A0016C2A28C73FCD00D15056 /* Modules */,
 				A0016C2C28C7401800D15056 /* SupportingFiles */,
@@ -237,6 +242,23 @@
 				A08C092428C8A7E200224BEA /* RocketDetailView.swift */,
 			);
 			path = RocketDetail;
+			sourceTree = "<group>";
+		};
+		A0FC9F3928C9D80A007D1BBD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0FC9F3A28C9D81B007D1BBD /* AsyncView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A0FC9F3A28C9D81B007D1BBD /* AsyncView */ = {
+			isa = PBXGroup;
+			children = (
+				A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */,
+				A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */,
+			);
+			path = AsyncView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,11 +399,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FC9F3C28C9D833007D1BBD /* LoadableObject.swift in Sources */,
 				A08C092228C8A0B500224BEA /* Icons.swift in Sources */,
 				A0016C3228C74F6900D15056 /* RocketListManager.swift in Sources */,
 				A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */,
 				A0016C3728C7509900D15056 /* DateCreator.swift in Sources */,
 				A0016C2928C73BCE00D15056 /* RocketListReducer.swift in Sources */,
+				A0FC9F3E28C9D893007D1BBD /* LoadingState.swift in Sources */,
 				A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */,
 				A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */,
 				A0016C3028C7430800D15056 /* APIError.swift in Sources */,
