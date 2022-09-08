@@ -1,3 +1,10 @@
+//
+//  RocketListView.swift
+//  TCA
+//
+//  Created by Lucie Havrdová on 06.09.2022.
+//
+
 import SwiftUI
 import ComposableArchitecture
 

@@ -8,6 +8,20 @@
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - RocketDetail State
+
+struct RocketDetailState: Equatable {
+    let id: String
+    var rocket: RocketDetail?
+}
+
+// MARK: - RocketDetail Action
+
+enum RocketDetailAction: Equatable {
+    case onAppear
+    case dataLoaded(Result<RocketDetail, APIError>)
+}
+
 // MARK: - Rocket Detail View
 
 struct RocketDetailView: View {

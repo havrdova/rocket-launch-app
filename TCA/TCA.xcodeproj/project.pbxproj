@@ -28,8 +28,8 @@
 		A08C091F28C89F0D00224BEA /* RocketCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091E28C89F0D00224BEA /* RocketCellView.swift */; };
 		A08C092228C8A0B500224BEA /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092128C8A0B500224BEA /* Icons.swift */; };
 		A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092428C8A7E200224BEA /* RocketDetailView.swift */; };
-		A08C092728C8C25500224BEA /* RocketDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092628C8C25500224BEA /* RocketDetailFeature.swift */; };
-		A08C092928C8C91100224BEA /* RocketDetailEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092828C8C91100224BEA /* RocketDetailEffect.swift */; };
+		A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092628C8C25500224BEA /* RocketDetailReducer.swift */; };
+		A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092828C8C91100224BEA /* RocketDetailManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,8 @@
 		A08C091E28C89F0D00224BEA /* RocketCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCellView.swift; sourceTree = "<group>"; };
 		A08C092128C8A0B500224BEA /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		A08C092428C8A7E200224BEA /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
-		A08C092628C8C25500224BEA /* RocketDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailFeature.swift; sourceTree = "<group>"; };
-		A08C092828C8C91100224BEA /* RocketDetailEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailEffect.swift; sourceTree = "<group>"; };
+		A08C092628C8C25500224BEA /* RocketDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailReducer.swift; sourceTree = "<group>"; };
+		A08C092828C8C91100224BEA /* RocketDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +232,8 @@
 		A08C092328C8A7C000224BEA /* RocketDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A08C092828C8C91100224BEA /* RocketDetailEffect.swift */,
-				A08C092628C8C25500224BEA /* RocketDetailFeature.swift */,
+				A08C092828C8C91100224BEA /* RocketDetailManager.swift */,
+				A08C092628C8C25500224BEA /* RocketDetailReducer.swift */,
 				A08C092428C8A7E200224BEA /* RocketDetailView.swift */,
 			);
 			path = RocketDetail;
@@ -388,8 +388,8 @@
 				A0016C2E28C7418400D15056 /* Rocket.swift in Sources */,
 				A08C091428C88C1E00224BEA /* RocketDetail+instances.swift in Sources */,
 				A08C091728C89A2A00224BEA /* LocalizedStringKey+.swift in Sources */,
-				A08C092928C8C91100224BEA /* RocketDetailEffect.swift in Sources */,
-				A08C092728C8C25500224BEA /* RocketDetailFeature.swift in Sources */,
+				A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */,
+				A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */,
 				A0016C3528C7506400D15056 /* Rocket+instances.swift in Sources */,
 				A08C091F28C89F0D00224BEA /* RocketCellView.swift in Sources */,
 				A08C091228C88A8000224BEA /* RocketDetail.swift in Sources */,
