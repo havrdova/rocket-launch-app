@@ -12,6 +12,7 @@ import ComposableArchitecture
 
 struct RocketDetailEnvironment {
     var rocketDetailRequest: (String) -> Effect<RocketDetail, APIError>
+    var mainQueue: AnySchedulerOf<DispatchQueue>
 }
 
 // MARK: - RocketDetail Reducer
@@ -24,9 +25,8 @@ let rocketDetailReducer = Reducer<
     switch action {
     case .onAppear:
         return environment.rocketDetailRequest(state.id)
-            .receive(on: DispatchQueue.main)
-            .catchToEffect()
-            .map(RocketDetailAction.dataLoaded)
+            .receive(on: environment.mainQueue)
+            .catchToEffect(RocketDetailAction.dataLoaded)
 
     case .dataLoaded(let result):
         switch result {

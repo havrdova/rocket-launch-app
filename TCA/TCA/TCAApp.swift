@@ -13,7 +13,10 @@ struct TCAApp: App {
     let store = Store(
         initialState: RocketListState(),
         reducer: rocketListReducer,
-        environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock, mainQueue: .main)
+        environment: RocketListEnvironment(
+            rocketListRequest: getRocketListFromMock,
+            mainQueue: .main
+        )
     )
 
     var body: some Scene {

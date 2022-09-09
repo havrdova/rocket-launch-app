@@ -52,7 +52,10 @@ struct RocketListView: View {
                     let store = Store(
                         initialState: RocketDetailState(id: rocket.id),
                         reducer: rocketDetailReducer,
-                        environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock)
+                        environment: RocketDetailEnvironment(
+                            rocketDetailRequest: getRocketDetailFromMock,
+                            mainQueue: .main
+                        )
                     )
                     RocketDetailView(store: store)
                 } label: {
