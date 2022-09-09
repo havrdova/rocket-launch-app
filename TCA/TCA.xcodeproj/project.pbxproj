@@ -31,6 +31,8 @@
 		A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092428C8A7E200224BEA /* RocketDetailView.swift */; };
 		A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092628C8C25500224BEA /* RocketDetailReducer.swift */; };
 		A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092828C8C91100224BEA /* RocketDetailManager.swift */; };
+		A0BCFEB228CB66BB0008B238 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFEB128CB66BB0008B238 /* Color+.swift */; };
+		A0BCFEB428CB68B70008B238 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0BCFEB328CB68B70008B238 /* Colors.xcassets */; };
 		A0FC9F3E28C9D893007D1BBD /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3D28C9D893007D1BBD /* Loadable.swift */; };
 		A0FC9F4028C9E03A007D1BBD /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */; };
 		A0FC9F4228C9E070007D1BBD /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F4128C9E070007D1BBD /* ErrorView.swift */; };
@@ -81,6 +83,8 @@
 		A08C092428C8A7E200224BEA /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
 		A08C092628C8C25500224BEA /* RocketDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailReducer.swift; sourceTree = "<group>"; };
 		A08C092828C8C91100224BEA /* RocketDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailManager.swift; sourceTree = "<group>"; };
+		A0BCFEB128CB66BB0008B238 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		A0BCFEB328CB68B70008B238 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A0FC9F3D28C9D893007D1BBD /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		A0FC9F4128C9E070007D1BBD /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -147,11 +151,12 @@
 			children = (
 				A0016C2F28C7430800D15056 /* APIError.swift */,
 				A0016C3628C7509900D15056 /* DateCreator.swift */,
+				A049F33628CB605900126989 /* ToolBarColorStyle.swift */,
 				A01BE66B28AFBAF2000567C4 /* Assets.xcassets */,
+				A0BCFEB328CB68B70008B238 /* Colors.xcassets */,
 				A08C091528C899F900224BEA /* Localizable */,
 				A01BE66D28AFBAF2000567C4 /* Preview Content */,
 				A08C092028C8A09400224BEA /* Providers */,
-				A049F33628CB605900126989 /* ToolBarColorStyle.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				A08C092128C8A0B500224BEA /* Icons.swift */,
+				A0BCFEB128CB66BB0008B238 /* Color+.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01BE66F28AFBAF2000567C4 /* Preview Assets.xcassets in Resources */,
+				A0BCFEB428CB68B70008B238 /* Colors.xcassets in Resources */,
 				A08C091A28C89B1800224BEA /* Localizable.strings in Resources */,
 				A01BE66C28AFBAF2000567C4 /* Assets.xcassets in Resources */,
 			);
@@ -406,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0FC9F4028C9E03A007D1BBD /* LoadableView.swift in Sources */,
+				A0BCFEB228CB66BB0008B238 /* Color+.swift in Sources */,
 				A08C092228C8A0B500224BEA /* Icons.swift in Sources */,
 				A0016C3228C74F6900D15056 /* RocketListManager.swift in Sources */,
 				A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */,
