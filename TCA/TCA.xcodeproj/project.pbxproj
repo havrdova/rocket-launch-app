@@ -30,8 +30,9 @@
 		A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092428C8A7E200224BEA /* RocketDetailView.swift */; };
 		A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092628C8C25500224BEA /* RocketDetailReducer.swift */; };
 		A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C092828C8C91100224BEA /* RocketDetailManager.swift */; };
-		A0FC9F3C28C9D833007D1BBD /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */; };
-		A0FC9F3E28C9D893007D1BBD /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */; };
+		A0FC9F3E28C9D893007D1BBD /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3D28C9D893007D1BBD /* Loadable.swift */; };
+		A0FC9F4028C9E03A007D1BBD /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */; };
+		A0FC9F4228C9E070007D1BBD /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC9F4128C9E070007D1BBD /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +79,9 @@
 		A08C092428C8A7E200224BEA /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
 		A08C092628C8C25500224BEA /* RocketDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailReducer.swift; sourceTree = "<group>"; };
 		A08C092828C8C91100224BEA /* RocketDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailManager.swift; sourceTree = "<group>"; };
-		A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
-		A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		A0FC9F3D28C9D893007D1BBD /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		A0FC9F4128C9E070007D1BBD /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +257,9 @@
 		A0FC9F3A28C9D81B007D1BBD /* AsyncView */ = {
 			isa = PBXGroup;
 			children = (
-				A0FC9F3B28C9D833007D1BBD /* LoadableObject.swift */,
-				A0FC9F3D28C9D893007D1BBD /* LoadingState.swift */,
+				A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */,
+				A0FC9F4128C9E070007D1BBD /* ErrorView.swift */,
+				A0FC9F3D28C9D893007D1BBD /* Loadable.swift */,
 			);
 			path = AsyncView;
 			sourceTree = "<group>";
@@ -399,13 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0FC9F3C28C9D833007D1BBD /* LoadableObject.swift in Sources */,
+				A0FC9F4028C9E03A007D1BBD /* LoadableView.swift in Sources */,
 				A08C092228C8A0B500224BEA /* Icons.swift in Sources */,
 				A0016C3228C74F6900D15056 /* RocketListManager.swift in Sources */,
 				A0016C2428C73B6800D15056 /* RocketListView.swift in Sources */,
 				A0016C3728C7509900D15056 /* DateCreator.swift in Sources */,
 				A0016C2928C73BCE00D15056 /* RocketListReducer.swift in Sources */,
-				A0FC9F3E28C9D893007D1BBD /* LoadingState.swift in Sources */,
+				A0FC9F3E28C9D893007D1BBD /* Loadable.swift in Sources */,
 				A08C092528C8A7E200224BEA /* RocketDetailView.swift in Sources */,
 				A01BE66828AFBAF1000567C4 /* TCAApp.swift in Sources */,
 				A0016C3028C7430800D15056 /* APIError.swift in Sources */,
@@ -413,6 +416,7 @@
 				A08C091428C88C1E00224BEA /* RocketDetail+instances.swift in Sources */,
 				A08C091728C89A2A00224BEA /* LocalizedStringKey+.swift in Sources */,
 				A08C092928C8C91100224BEA /* RocketDetailManager.swift in Sources */,
+				A0FC9F4228C9E070007D1BBD /* ErrorView.swift in Sources */,
 				A08C092728C8C25500224BEA /* RocketDetailReducer.swift in Sources */,
 				A0016C3528C7506400D15056 /* Rocket+instances.swift in Sources */,
 				A08C091F28C89F0D00224BEA /* RocketCellView.swift in Sources */,

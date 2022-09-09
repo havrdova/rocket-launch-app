@@ -10,15 +10,15 @@ import ComposableArchitecture
 
 @main
 struct TCAApp: App {
+    let store = Store(
+        initialState: RocketListState(),
+        reducer: rocketListReducer,
+        environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock, mainQueue: .main)
+    )
+
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                RocketListView(store: Store(
-                    initialState: RocketListState(),
-                    reducer: rocketListReducer,
-                    environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock)
-                ))
-            }
+            RocketListView(store: store)
         }
     }
 }

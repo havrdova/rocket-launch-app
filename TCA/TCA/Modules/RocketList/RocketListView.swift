@@ -11,7 +11,7 @@ import ComposableArchitecture
 // MARK: - RocketList State
 
 struct RocketListState: Equatable {
-    var rockets: [Rocket] = []
+    var rockets: Loadable<[Rocket], APIError> = .loading
 }
 
 // MARK: - RocketList Action
@@ -24,19 +24,28 @@ enum RocketListAction: Equatable {
 // MARK: - RocketList View
 
 struct RocketListView: View {
+    @ObservedObject var viewStore: ViewStore<RocketListState, RocketListAction>
     let store: Store<RocketListState, RocketListAction>
 
-    var body: some View {
-        WithViewStore(self.store) { store in
-            content(rockets: store.rockets)
-                .onAppear{
-                    store.send(.onAppear)
-                }
-                .navigationTitle(.RocketList.title)
-        }
+    init(store: Store<RocketListState, RocketListAction>) {
+        self.store = store
+        self.viewStore = ViewStore(store)
     }
 
-    func content(rockets: [Rocket]) -> some View {
+    var body: some View {
+        NavigationView {
+            LoadableView(for: viewStore.rockets) { rockets in
+                loadedView(rockets: rockets)
+            }
+            .navigationTitle(.RocketList.title)
+        }
+        .onAppear{
+            viewStore.send(.onAppear)
+        }
+
+    }
+
+    func loadedView(rockets: [Rocket]) -> some View {
         List {
             ForEach(rockets) { rocket in
                 NavigationLink {
@@ -60,7 +69,7 @@ struct RocketListView_Previews: PreviewProvider {
         RocketListView(store: Store(
             initialState: RocketListState(),
             reducer: rocketListReducer,
-            environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock)
+            environment: RocketListEnvironment(rocketListRequest: getRocketListFromMock, mainQueue: .main)
         ))
     }
 }

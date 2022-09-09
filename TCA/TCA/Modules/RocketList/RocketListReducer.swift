@@ -5,6 +5,7 @@
 //  Created by Lucie Havrdová on 06.09.2022.
 //
 
+import CombineSchedulers
 import ComposableArchitecture
 import Dispatch
 
@@ -12,6 +13,8 @@ import Dispatch
 
 struct RocketListEnvironment {
     var rocketListRequest: () -> Effect<[Rocket], APIError>
+    var mainQueue: AnySchedulerOf<DispatchQueue>
+    // TODO: main queue
 }
 
 // MARK: - RocketList Reducer
@@ -24,16 +27,15 @@ let rocketListReducer = Reducer<
     switch action {
     case .onAppear:
         return environment.rocketListRequest()
-            .receive(on: DispatchQueue.main )
-            .catchToEffect()
-            .map(RocketListAction.dataLoaded)
+            .receive(on: environment.mainQueue)
+            .catchToEffect(RocketListAction.dataLoaded)
 
     case .dataLoaded(let result):
         switch result {
         case .success(let rockets):
-            state.rockets = rockets
+            state.rockets = .loaded(rockets)
         case .failure(let error):
-            break
+            state.rockets = .failed(error)
         }
         return .none
     }
