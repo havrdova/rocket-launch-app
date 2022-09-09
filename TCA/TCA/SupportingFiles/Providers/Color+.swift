@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Color {
-    static let appPink = Color("")
+    static let appPink = Color("rocketPink")
     static let appGray = Color("")
-    static let appBackgroundGray = Color("")
+    static let appBackgroundGray = Color("stagesColor")
 }
