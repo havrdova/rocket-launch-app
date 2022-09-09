@@ -257,9 +257,9 @@
 		A0FC9F3A28C9D81B007D1BBD /* AsyncView */ = {
 			isa = PBXGroup;
 			children = (
-				A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */,
 				A0FC9F4128C9E070007D1BBD /* ErrorView.swift */,
 				A0FC9F3D28C9D893007D1BBD /* Loadable.swift */,
+				A0FC9F3F28C9E03A007D1BBD /* LoadableView.swift */,
 			);
 			path = AsyncView;
 			sourceTree = "<group>";

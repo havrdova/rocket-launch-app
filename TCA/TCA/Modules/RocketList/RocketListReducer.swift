@@ -14,7 +14,6 @@ import Dispatch
 struct RocketListEnvironment {
     var rocketListRequest: () -> Effect<[Rocket], APIError>
     var mainQueue: AnySchedulerOf<DispatchQueue>
-    // TODO: main queue
 }
 
 // MARK: - RocketList Reducer
