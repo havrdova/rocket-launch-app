@@ -31,9 +31,9 @@ let rocketDetailReducer = Reducer<
     case .dataLoaded(let result):
         switch result {
         case .success(let rocket):
-            state.rocket = rocket
+            state.rocket = .loaded(rocket)
         case .failure(let error):
-            break
+            state.rocket = .failed(error)
         }
         return .none
     }

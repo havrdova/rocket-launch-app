@@ -11,7 +11,7 @@ import ComposableArchitecture
 // MARK: - RocketList State
 
 struct RocketListState: Equatable {
-    var rockets: Loadable<[Rocket], APIError> = .loading
+    var rockets: Loadable<[Rocket], APIError> = .idle
 }
 
 // MARK: - RocketList Action
@@ -49,11 +49,12 @@ struct RocketListView: View {
         List {
             ForEach(rockets) { rocket in
                 NavigationLink {
-                    RocketDetailView(store: Store(
+                    let store = Store(
                         initialState: RocketDetailState(id: rocket.id),
                         reducer: rocketDetailReducer,
-                        environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock))
+                        environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock)
                     )
+                    RocketDetailView(store: store)
                 } label: {
                     RocketCellView(rocket: rocket)
                 }

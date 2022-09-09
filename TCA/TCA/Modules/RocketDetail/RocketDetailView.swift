@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 struct RocketDetailState: Equatable {
     let id: String
-    var rocket: RocketDetail?
+    var rocket: Loadable<RocketDetail, APIError> = .idle
 }
 
 // MARK: - RocketDetail Action
@@ -25,20 +25,16 @@ enum RocketDetailAction: Equatable {
 // MARK: - Rocket Detail View
 
 struct RocketDetailView: View {
+    @ObservedObject var viewStore: ViewStore<RocketDetailState, RocketDetailAction>
     let store: Store<RocketDetailState, RocketDetailAction>
 
+    init(store: Store<RocketDetailState, RocketDetailAction>) {
+        self.store = store
+        self.viewStore = ViewStore(store)
+    }
+
     var body: some View {
-        WithViewStore(self.store) { store in
-            if let rocket = store.rocket {
-                content(rocket: rocket)
-                    .onAppear{
-                        store.send(.onAppear)
-                    }
-                    .navigationTitle(store.rocket?.name ?? "noName")
-            } else {
-                Text("Loading")
-            }
-        }
+        EmptyView()
     }
 
     func content(rocket: RocketDetail) -> some View {
