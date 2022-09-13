@@ -31,14 +31,63 @@ struct RocketDetailView: View {
     init(store: Store<RocketDetailState, RocketDetailAction>) {
         self.store = store
         self.viewStore = ViewStore(store)
+
+        toolBarColor(.lightGray)
     }
 
     var body: some View {
-        EmptyView()
+        LoadableView(for: viewStore.rocket) { rocket in
+            loadedView(rocket: rocket)
+        }
+        .onAppear{
+            viewStore.send(.onAppear)
+        }
     }
 
-    func content(rocket: RocketDetail) -> some View {
-        Text(rocket.name)
+    func loadedView(rocket: RocketDetail) -> some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                TitledSection(title: .RocketDetail.overviewTitle) {
+                    Text(rocket.description)
+                }
+
+                TitledSection(title: .RocketDetail.Parameters.title) {
+                    Text("3 squares here")
+                }
+
+                StageView(
+                    title: "First stage",
+                    stage: rocket.firstStage
+                )
+
+                StageView(
+                    title: "Second stage",
+                    stage: rocket.secondStage
+                )
+
+                imagesPart(rocket: rocket)
+            }
+            .padding(.horizontal)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(rocket.name)
+                        .font(.headline)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Text(.RocketDetail.launch)
+                }
+            }
+        }
+    }
+
+    private func imagesPart(rocket: RocketDetail) -> some View {
+        TitledSection(title: .RocketDetail.photosTitle) {
+            ForEach(rocket.photos, id: \.self) {
+                if let url = URL(string: $0.stringURL) {
+                    ImageView(url: url)
+                }
+            }
+        }
     }
 }
 
@@ -49,7 +98,10 @@ struct RocketDetailView_Previews: PreviewProvider {
         RocketDetailView(store: Store(
             initialState: RocketDetailState(id: RocketDetail.falcon9.id),
             reducer: rocketDetailReducer,
-            environment: RocketDetailEnvironment(rocketDetailRequest: getRocketDetailFromMock)
+            environment: RocketDetailEnvironment(
+                rocketDetailRequest: getRocketDetailFromMock,
+                mainQueue: .main
+            )
         ))
     }
 }
