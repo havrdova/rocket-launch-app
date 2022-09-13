@@ -74,7 +74,13 @@ struct RocketDetailView: View {
                         .font(.headline)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text(.RocketDetail.launch)
+                    NavigationLink(.RocketDetail.launch) {
+                        RocketLaunchView(store: Store(
+                            initialState: RocketLaunchState(),
+                            reducer: rocketLaunchReducer,
+                            environment: RocketLaunchEnvironment()
+                        ))
+                    }
                 }
             }
         }
