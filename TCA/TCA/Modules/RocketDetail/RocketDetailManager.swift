@@ -23,9 +23,6 @@ func getRocketDetail(id: String) -> Effect<RocketDetail, APIError> {
         .map{ $0.toModel }
         .mapError{ _ in APIError.mapingDTOError }
         .eraseToEffect()
-    
-//    // TODO: implement
-//    return Effect(value: RocketDetail.falcon9)
 }
 
 func getRocketDetailFromMock(id: String) -> Effect<RocketDetail, APIError> {
