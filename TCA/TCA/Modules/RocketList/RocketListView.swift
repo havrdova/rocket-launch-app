@@ -53,7 +53,7 @@ struct RocketListView: View {
                         initialState: RocketDetailState(id: rocket.id),
                         reducer: rocketDetailReducer,
                         environment: RocketDetailEnvironment(
-                            rocketDetailRequest: getRocketDetailFromMock,
+                            rocketDetailRequest: getRocketDetail,
                             mainQueue: .main
                         )
                     )
