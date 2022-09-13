@@ -14,7 +14,7 @@ struct TCAApp: App {
         initialState: RocketListState(),
         reducer: rocketListReducer,
         environment: RocketListEnvironment(
-            rocketListRequest: getRocketListFromMock,
+            rocketListRequest: getRocketList,
             mainQueue: .main
         )
     )

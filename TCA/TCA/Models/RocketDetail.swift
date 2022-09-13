@@ -5,7 +5,7 @@
 //  Created by Lucie Havrdová on 07.09.2022.
 //
 
-import Foundation
+import SwiftUI
 
 // MARK: - Rocket Detail Model
 
@@ -30,7 +30,7 @@ enum ParameterType {
 
 struct Parameter: Equatable {
     let type: ParameterType
-    let name: String // LocalizedStringKey // TODO: implement
+    let name: LocalizedStringKey // TODO: implement
     var metric: Double
     let imperial: Double
 
