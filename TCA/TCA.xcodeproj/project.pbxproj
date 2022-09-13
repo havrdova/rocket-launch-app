@@ -31,6 +31,7 @@
 		A05867CA28D082830004E606 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05867C928D082830004E606 /* ImageView.swift */; };
 		A05867D228D0A0A40004E606 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05867D128D0A0A40004E606 /* RocketLaunchView.swift */; };
 		A05867D428D0A1670004E606 /* RocketLaunchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05867D328D0A1670004E606 /* RocketLaunchReducer.swift */; };
+		A05867D728D0A73C0004E606 /* ComposableCoreMotion in Frameworks */ = {isa = PBXBuildFile; productRef = A05867D628D0A73C0004E606 /* ComposableCoreMotion */; };
 		A08C091228C88A8000224BEA /* RocketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091128C88A8000224BEA /* RocketDetail.swift */; };
 		A08C091428C88C1E00224BEA /* RocketDetail+instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091328C88C1E00224BEA /* RocketDetail+instances.swift */; };
 		A08C091728C89A2A00224BEA /* LocalizedStringKey+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C091628C89A2A00224BEA /* LocalizedStringKey+.swift */; };
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05867D728D0A73C0004E606 /* ComposableCoreMotion in Frameworks */,
 				A0016C2728C73BA800D15056 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +352,7 @@
 			name = TCA;
 			packageProductDependencies = (
 				A0016C2628C73BA800D15056 /* ComposableArchitecture */,
+				A05867D628D0A73C0004E606 /* ComposableCoreMotion */,
 			);
 			productName = TCA;
 			productReference = A01BE66428AFBAF1000567C4 /* TCA.app */;
@@ -426,6 +429,7 @@
 			mainGroup = A01BE65B28AFBAF1000567C4;
 			packageReferences = (
 				A0016C2528C73BA800D15056 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				A05867D528D0A73C0004E606 /* XCRemoteSwiftPackageReference "composable-core-motion" */,
 			);
 			productRefGroup = A01BE66528AFBAF1000567C4 /* Products */;
 			projectDirPath = "";
@@ -847,6 +851,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		A05867D528D0A73C0004E606 /* XCRemoteSwiftPackageReference "composable-core-motion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/composable-core-motion";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -854,6 +866,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0016C2528C73BA800D15056 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		A05867D628D0A73C0004E606 /* ComposableCoreMotion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A05867D528D0A73C0004E606 /* XCRemoteSwiftPackageReference "composable-core-motion" */;
+			productName = ComposableCoreMotion;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
