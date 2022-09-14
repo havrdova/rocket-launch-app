@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import CoreMotion
 
 // MARK: - RocketDetail State
 
@@ -78,7 +79,7 @@ struct RocketDetailView: View {
                         RocketLaunchView(store: Store(
                             initialState: RocketLaunchState(),
                             reducer: rocketLaunchReducer,
-                            environment: RocketLaunchEnvironment()
+                            environment: RocketLaunchEnvironment(motionManager: .live)
                         ))
                     }
                 }

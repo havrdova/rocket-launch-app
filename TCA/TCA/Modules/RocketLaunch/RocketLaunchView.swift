@@ -7,17 +7,23 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ComposableCoreMotion
 
 // MARK: - RocketLauch State
 
 struct RocketLaunchState: Equatable {
-
+    var isLaunched: Bool = false
+    var pitch: Double = 0.0
+    var roll: Double = 0.0
 }
 
 // MARK: - RocketLauch Action
 
 enum RocketLaunchAction: Equatable {
-
+    case motionUpdate(Result<DeviceMotion, NSError>)
+    case startMotionManager
+    case stopMotionManager
+    case launch
 }
 
 // MARK: - Rocket Launch View
@@ -33,10 +39,13 @@ struct RocketLaunchView: View {
 
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text(String(format: "pitch: %.1f", viewStore.pitch))
+            Text(String(format: "roll: %.1f", viewStore.roll))
         }
         .navigationTitle(.RocketLaunch.title)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear{ viewStore.send(.startMotionManager) }
+        .onDisappear{ viewStore.send(.stopMotionManager) }
     }
 }
 
@@ -47,7 +56,7 @@ struct RocketLaunchView_Previews: PreviewProvider {
         RocketLaunchView(store: Store(
             initialState: RocketLaunchState(),
             reducer: rocketLaunchReducer,
-            environment: RocketLaunchEnvironment()
+            environment: RocketLaunchEnvironment(motionManager: .live)
         ))
     }
 }
